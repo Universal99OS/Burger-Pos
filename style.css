@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    background-color: #a4ac861a;
+}
+#mainBar{
+    background-color: white;
+    width: 100%;
+    height:110px;
+    box-shadow: 0 4px 10px rgb(0, 0, 0,0.1);
+}
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.searchBar{
+    width: 630px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: rgba(164,172,134,0.15);
+    display: flex;
+    margin-top: 6px;
+}
+
+#searchBtnLogo{
+    padding: 0;
+    border-radius: 10px;
+    width: 60px;
+    height: 45px;
+    background-color: #FF9F1C;
+    background-image: url("Asset/Search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#addBtn{
+    position: absolute;
+    width: 155px;
+    height: 45px;
+    border-radius: 10px;
+    color: white;
+    padding: 0;
+    font-size: 14px;
+    background-color: #FF9F1C;
+    font-weight:400;
+    left: 1032px;
+    top: 15px;
+}
+
+#addBtn span{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#addBtn:hover{
+    
+    background-color: white;
+    color: #FF9F1C;
+    outline-width: 2px;
+    outline-color: #FF9F1C;
+    
+}
+
+#searchBtnLogo:hover{
+    background-color: white;
+    background-image: url("Asset/Search\ \(1\).svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-width: 2px;
+    border-color: #FF9F1C;
+}
+.search{
+    background: transparent;
+    flex: 1;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    color: #A7B0B5;
+}
+
+.searches{
+    margin-left: 325px;
+    margin-top: 1px;
+}
+
+.orderID{
+    color: black;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 24px;
+    margin-left:1114px;
+    margin-top: -48px;
+}
+
+.brand{
+    position: absolute;
+    color: #F96E73;
+    letter-spacing: 1px;
+    font-size: 24px;
+    font-weight: 500;
+    left: 1px;
+    top: 1px;
+    margin-top: 27px;
+    margin-left: 97px;
+
+}
+
+.brand span{
+    color: black;
+}
+
+
+
+
