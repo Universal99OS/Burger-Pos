@@ -109,6 +109,110 @@ body{
     color: black;
 }
 
+#chText{
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: black;
+    font-size: 22px;
+    padding: 4px;
+}
+
+#catCount{
+    color: #F96E73;
+    margin-left: 220px;
+    margin-top: -31px;
+}
+
+.categoryNav{
+    margin-top: 20px;
+}
+
+
+
+.categories{
+    width: 747px;
+    height: 140px;
+    border-radius: 0 10px 10px 0;
+    background-color: white;
+    box-shadow: 0 4px 10px rgb(0, 0, 0,0.1);
+}
+
+
+
+.allBtn{
+    background-color: rgba(164,172,134,0.15);
+    border-radius: 30px;
+    width: 132px;
+    height: 52px;
+    margin-right: 3px;
+    background-image: url("Asset/🦆\ emoji\ _face\ savouring\ delicious\ food_.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    text-align:end;
+}
+
+.burgerBtn{
+    background-color: rgba(164,172,134,0.15);
+    border-radius: 30px;
+    width: 132px;
+    height: 52px;
+    margin-right: 3px;
+    background-image: url("Asset/🦆\ emoji\ _hamburger_.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    text-align:center;
+
+}
+
+.submaBtn{
+    background-color: rgba(164,172,134,0.15);
+    border-radius: 30px;
+    width: 132px;
+    height: 52px;
+    margin-right: 3px;
+    background-image: url("Asset/submarine.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    text-align:end;
+
+
+}
+
+.firesBtn{
+    background-color: rgba(164,172,134,0.15);
+    border-radius: 30px;
+    width: 132px;
+    height: 52px;
+    margin-right: 3px;
+    background-image: url("Asset/fries.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    text-align:center;
+}
+
+.pastaBtn{
+    background-color: rgba(164,172,134,0.15);
+    border-radius: 30px;
+    width: 132px;
+    height: 52px;
+}
+
+.chickenBtn{
+    background-color: rgba(164,172,134,0.15);
+    border-radius: 30px;
+    width: 132px;
+    height: 52px;
+    margin-right: 3px;
+}
+
+.bevBtn{
+    background-color: rgba(164,172,134,0.15);
+    border-radius: 30px;
+    width: 132px;
+    height: 52px;
+    margin-right: 3px;
+}
+
 
 
 
