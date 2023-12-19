@@ -136,82 +136,106 @@ body{
     background-color: white;
     box-shadow: 0 4px 10px rgb(0, 0, 0,0.1);
 }
-
-
-
-.allBtn{
-    background-color: rgba(164,172,134,0.15);
-    border-radius: 30px;
-    width: 132px;
-    height: 52px;
-    margin-right: 3px;
-    background-image: url("Asset/🦆\ emoji\ _face\ savouring\ delicious\ food_.png");
-    background-repeat: no-repeat;
-    background-position: 5px;
-    text-align:end;
+.scrollable-item-container{
+    
+    position: relative;
+    top: 20px;
+    
+    
+    
 }
-
-.burgerBtn{
-    background-color: rgba(164,172,134,0.15);
-    border-radius: 30px;
-    width: 132px;
-    height: 52px;
-    margin-right: 3px;
-    background-image: url("Asset/🦆\ emoji\ _hamburger_.png");
-    background-repeat: no-repeat;
-    background-position: 5px;
-    text-align:center;
+.navbarEdit{
+    display: flex;
+    gap: 16px;
+    padding: 12px;
+    list-style: none;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 0;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
 }
 
-.submaBtn{
-    background-color: rgba(164,172,134,0.15);
-    border-radius: 30px;
-    width: 132px;
-    height: 52px;
-    margin-right: 3px;
-    background-image: url("Asset/submarine.png");
-    background-repeat: no-repeat;
-    background-position: 5px;
-    text-align:end;
+.scrollable-item-container ul::-webkit-scrollbar{
+    display: none;
+}
 
+.navbarEdit a{
+   color: #000;
+   text-decoration: none;
+   background-color: rgba(164,172,134,0.15);
+   padding: 8px 24px;
+   display: inline-block;
+   border-radius: 30px;
+   user-select: none;
+   white-space: nowrap;
 
 }
 
-.firesBtn{
-    background-color: rgba(164,172,134,0.15);
-    border-radius: 30px;
-    width: 132px;
-    height: 52px;
-    margin-right: 3px;
-    background-image: url("Asset/fries.png");
-    background-repeat: no-repeat;
-    background-position: 5px;
-    text-align:center;
+.navbarEdit a:hover{
+    color: #F96E73;
 }
 
-.pastaBtn{
-    background-color: rgba(164,172,134,0.15);
-    border-radius: 30px;
-    width: 132px;
-    height: 52px;
+.scrollable-item-container svg{
+    width: 50px;
+    height: 50px;
+    color: black;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0 10px;
 }
 
-.chickenBtn{
-    background-color: rgba(164,172,134,0.15);
-    border-radius: 30px;
-    width: 132px;
-    height: 52px;
-    margin-right: 3px;
+
+.scrollable-item-container .left-Arrow,
+.scrollable-item-container .right-Arrow{
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    top: 0;
+    display: flex;
+    align-items: center;
 }
 
-.bevBtn{
-    background-color: rgba(164,172,134,0.15);
-    border-radius: 30px;
-    width: 132px;
-    height: 52px;
-    margin-right: 3px;
+.scrollable-item-container .right-Arrow{
+    right: 0;
+    justify-content: flex-end;
+    background: linear-gradient(to left,#fff 50%, transparent);
+
 }
+
+.scrollable-item-container .left-Arrow{
+    left: 0;
+    justify-content: flex-start;
+    background: linear-gradient(to right,#fff 50%, transparent);
+    
+}
+
+.scrollable-item-container svg:hover{
+    border-radius: 50%;
+    background-color: rgba(164,172,134,0.15);
+
+}
+
+.scrollable-item-container .left-Arrow .activeItem,
+.scrollable-item-container .right-Arrow .activeItem{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
