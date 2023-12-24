@@ -175,6 +175,10 @@ body{
 
 }
 
+.navbarEdit a:active{
+    color: #FF9F1C;
+}
+
 .navbarEdit a:hover{
     color: #F96E73;
 }
@@ -237,11 +241,20 @@ body{
     /* background-color: #F96E73; */
     padding: 2px 4px;
     display: flex;
-    gap: 19px;
     flex-wrap: wrap;
     overflow: hidden;
     overflow-y: scroll;
 }
+
+#burgers,
+#submarines{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 19px;
+
+}
+
 .scrollable-allItem-container .itemBox{
     width: 220px;
     height: 279px;
@@ -431,12 +444,19 @@ body{
 .turkeyburger .sizes .sizelist,
 .barconBurger .sizes .sizelist,
 .shawarmaBurger .sizes .sizelist,
-.oliveBurger .sizes .sizelist{
+.oliveBurger .sizes .sizelist,
+.grinder-submarine .sizes .sizelist,
+.cheese-submarinee .sizes .sizelist,
+.double-cheese-submarinee .sizes .sizelist,
+.hoggie-submarinee .sizes .sizelist{
     display: none;
 }
 
 .doublecheeseBurger .itemTitile,
-.chrispy-chickenBurger .itemTitile{
+.chrispy-chickenBurger .itemTitile,
+.crispy-chicken-submariner .itemTitile,
+.double-cheese-submarinee .itemTitile,
+.hoggie-submarinee .itemTitile{
     font-size: 15px;
 }
 
