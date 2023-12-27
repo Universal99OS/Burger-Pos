@@ -27,3 +27,17 @@ for(let i=0;i<minusBtn.length;i++){
         minusQuantity(i);
     }
 }
+function displayOrder(title){
+    const orderList= document.querySelector(".orderDetail .orders #orderLi");
+    const itemTitle=document.querySelector(`.${title} .itemTitile`).innerHTML;
+    const itemName=document.createElement('li');
+    itemName.innerHTML=itemTitle;
+
+    orderList.appendChild(itemName);
+}
+
+document.querySelectorAll(".itemBox .addBtn button").forEach(function(button){
+    button.onclick=function(){
+        displayOrder(this.dataset.item);
+    }
+})
