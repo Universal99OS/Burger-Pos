@@ -1,18 +1,29 @@
-let quantity=1;
 
-function addQuantity(){
-    quantity++;
-    document.querySelector(".qtyCount").innerHTML=quantity;
+
+function addQuantity(index){
+    let count=document.querySelectorAll(".qtyCount");
+    count[index].innerHTML=parseInt(count[index].innerHTML,10)+1;
 }
 
-function minusQuantity(){
-    if(quantity>1){
-        quantity--;
-        document.querySelector(".qtyCount").innerHTML=quantity;
+function minusQuantity(index){
+    let count=document.querySelectorAll(".qtyCount");
+    let value=parseInt(count[index].innerHTML,10);
+    if(value>1){
+        count[index].innerHTML=value-1;
     }else{
-        alert(`Minimum quantity should be ${quantity}`);
+        alert(`Minimum qty should be ${value}`);
     }
 }
 
-document.querySelector(".itemBox .options .qty .plus").onclick=addQuantity;
-document.querySelector(".itemBox .options .qty .minus").onclick=minusQuantity;
+const plusBtns= document.querySelectorAll(".itemBox .options .qty .plus");
+for(let i=0;i<plusBtns.length;i++){
+    plusBtns[i].onclick=function(){
+        addQuantity(i);
+    }
+}
+const minusBtn=document.querySelectorAll(".itemBox .options .qty .minus");
+for(let i=0;i<minusBtn.length;i++){
+    minusBtn[i].onclick=function(){
+        minusQuantity(i);
+    }
+}
