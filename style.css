@@ -519,11 +519,8 @@ body{
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    /* background-color: green; */
+    background-color: white;
     justify-content: center;
-    
-    
-
 }
 
 .orderDetail .orders #orderLi li .image img{
