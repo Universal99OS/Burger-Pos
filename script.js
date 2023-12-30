@@ -87,6 +87,32 @@ document.querySelectorAll(".itemBox .addBtn button").forEach(function(button){
     }
 })
 
+// deActiveAll Size options
+function deActiveAll(itemParent){
+    document.querySelectorAll(`.${itemParent} .sizelist a`).forEach(function(a){
+        const sizeOption=window.getComputedStyle(a);
+        if(a.classList.contains('active')){
+            a.classList.remove('active');
+        }
+    });
+}
+
+// appling the active property to the size option buttons
+
+document.querySelectorAll('.sizelist').forEach(function(sizelist){
+    const ulStyle=window.getComputedStyle(sizelist);
+    if(!(ulStyle.display==='none')){
+        console.log(sizelist.dataset.item);
+        document.querySelectorAll(`.${sizelist.dataset.item} .sizelist a`).forEach(function(a){
+            a.onclick=function(){
+                deActiveAll(sizelist.dataset.item);
+                a.classList.add('active');
+                document.querySelector(`.${sizelist.dataset.item} .itemPrice`).innerHTML=`Rs. ${a.dataset.price}.00`;
+            }
+        })
+    }
+});
+
 // var linkk=document.querySelector(".items img").src;
 // console.log(linkk);
 // alert(linkk);

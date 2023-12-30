@@ -357,6 +357,11 @@ body{
     
 }
 
+.active{
+    background-color:#F96E73 !important; 
+    color: white !important;
+}
+
 .sizelist a:hover{
     background-color: #F96E73;
     color: #fff;
