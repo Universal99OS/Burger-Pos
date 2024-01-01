@@ -231,7 +231,7 @@ body{
 
 .items{
     width: 747px;
-    background-color: #FF9F1C;
+    /* background-color: #FF9F1C; */
     padding-left: 0;
     /* padding-right: 0; */
     margin-top: -740px !important;
