@@ -575,11 +575,32 @@ body{
     border-radius: 50%;
 }
 
+.orderDetail .orders #orderLi li #orderOption #qtyCount #minus:hover,
+.orderDetail .orders #orderLi li #orderOption #qtyCount #plus:hover{
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    color: #ffdd00;
+    border-radius: 50%;
+}
+
 #remove{
     color: #F96E73;
     font-size: 12px;
     font-weight: 400;
     /* text-align: center; */
+}
+
+#remove:hover{
+    color: #353535;
+}
+
+.mainHome{
+    background-color: white;
+    width: 210px;
+    height: 500px;
+    margin-right: 10px;
+    box-shadow: 0 4px 10px rgb(0, 0, 0,0.1);
 }
 
 

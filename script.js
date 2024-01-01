@@ -56,26 +56,81 @@ function displayOrder(title){
     const itemPrice=document.createElement('div');
     itemPrice.id='itemPrice';
 
-    const sizeOption=document.querySelector(`.${title} .options .sizes .sizelist`);
-    const sizeStyle=window.getComputedStyle(sizeOption);
+    // const sizeOption=document.querySelector(`.${title} .options .sizes .sizelist`);
+    // const sizeStyle=window.getComputedStyle(sizeOption);
 
-    if(!(sizeStyle.display==='none')){
-        document.querySelectorAll(`.${title} .options .sizes .sizelist a`).forEach(function(li){
-            li.onclick=function(){
-                itemPrice.innerHTML=this.dataset.price;
-            }
-        })
-    }else{
-        itemPrice.innerHTML=document.querySelector(`.${title} .itemPrice`).innerHTML;
-    }
+    // if(!(sizeStyle.display==='none')){
+    //     document.querySelectorAll(`.${title} .options .sizes .sizelist a`).forEach(function(li){
+    //         li.onclick=function(){
+    //             itemPrice.innerHTML=this.dataset.price;
+    //         }
+    //     })
+    // }else{
+    //     itemPrice.innerHTML=document.querySelector(`.${title} .itemPrice`).innerHTML;
+    // }
+
+    const coun=document.querySelector(`.${title} .options .qty .qtyCount`).innerHTML;
+    const priz=document.querySelector(`.${title} .itemPrice`).innerHTML.split(' ');
+    itemPrice.innerHTML=`Rs ${parseInt(coun)*parseFloat(priz[1])}.00`;
 
     itemDis.appendChild(itemPrice);
 
+
+    // create orderOption container
+
+    const orderOption=document.createElement('div');
+    orderOption.id='orderOption';
+
+    // create qty count container
+
+    const qtyCount=document.createElement('div');
+    qtyCount.id='qtyCount';
+
+    orderOption.appendChild(qtyCount);
+
+    // create minus container
+
+    const minus=document.createElement('div');
+    minus.id='minus';
+
+    minus.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" data-slot="icon" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" /></svg>';
+
+    qtyCount.appendChild(minus);
+
+    // create number count container
+
+    const numC=document.createElement('div');
+    numC.id='numCount';
+
+    numC.innerHTML=parseInt(coun);
+
+    qtyCount.appendChild(numC);
+
+    // create plus container
+
+    const plusC=document.createElement('div');
+
+    plusC.id='plus';
+
+    plusC.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" data-slot="icon" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>';
+
+    qtyCount.appendChild(plusC);
+
+
+    // create remove container
+
+    const removeC=document.createElement('div');
+    removeC.id='remove';
+
+    removeC.innerHTML='Remove';
+
+    orderOption.appendChild(removeC);
     // const itemTitle=document.querySelector(`.${title} .itemTitile`).innerHTML;
     const cartItem=document.createElement('li');
     // itemName.innerHTML=itemTitle;
     cartItem.appendChild(imgContainer);
     cartItem.appendChild(itemDis);
+    cartItem.appendChild(orderOption);
 
     orderList.appendChild(cartItem);
 
@@ -102,7 +157,6 @@ function deActiveAll(itemParent){
 document.querySelectorAll('.sizelist').forEach(function(sizelist){
     const ulStyle=window.getComputedStyle(sizelist);
     if(!(ulStyle.display==='none')){
-        console.log(sizelist.dataset.item);
         document.querySelectorAll(`.${sizelist.dataset.item} .sizelist a`).forEach(function(a){
             a.onclick=function(){
                 deActiveAll(sizelist.dataset.item);
